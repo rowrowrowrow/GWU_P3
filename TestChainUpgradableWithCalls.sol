@@ -11,7 +11,7 @@ contract TestChainUpgradableWithCalls is ChainUpgradable {
     }
 
     function testCall() public returns(string memory){
-        if (isFinalImplementation()){
+        if (isImplementation()){
             return test;
         }else{
             (bool success, bytes memory data) = implementation().call(abi.encodeWithSignature("testCall()"));
