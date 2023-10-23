@@ -37,7 +37,7 @@ abstract contract ChainUpgradable is Proxy, Ownable {
     /**
      * @dev Returns true if the final implementation is this contract
      */
-    function isFinalImplementation() public view returns (bool) {
+    function isFinalImplementation() public returns (bool) {
         return implementation() == getFinalImplementation();
     }
 
